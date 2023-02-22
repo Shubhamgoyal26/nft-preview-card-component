@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+/*
+CSS RESET
+*/
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+/*
+6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+Basic Styling
+*/
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+}
+
+h1{
+    font-weight: bold;
+    color:  hsl(0, 0%, 100%);
+}
+
+p{
+    font-size: 18px;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+}
+
+/*
+Design Styling
+*/
+article{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(216, 50%, 16%);
+    width: 340px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 20px 5px 15px, rgba(0, 0, 0, 0.05) 0px 15px 15px 50px;
+}
+
+.hero-image{
+    border-radius: 10px;
+}
+
+.overlay-container{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    background-color: hsl(178, 100%, 50%);
+}
+
+.overlay-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+/* Technique to get both elements styled differently on a single hover
+    Also hovers the icon even when the hover is on the image and not on the icon itself
+*/
+.overlay-container:hover .overlay{
+    opacity: 0.6;
+}
+
+.overlay-container:hover .overlay-icon{
+    opacity: 1.0;
+}
+
+h1, p{
+    margin: 20px 0;
+}
+
+.price{
+    color: hsl(178, 100%, 50%);
+    font-weight: 700;
+    padding-right: 90px;
+}
+
+.time{
+    font-weight: 400;
+}
+
+/* To align all icons vertically and display icons with their text in the same line */
+p > *,
+footer > *{
+    vertical-align: middle;
+    display: inline;
+}
+
+/* Safer way to style hr than just changing border color */
+hr{
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.profile-icon{
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 100%);
+    margin-right: 15px;
+}
+
+footer{
+    padding: 20px 0;
+}
+
+footer p{
+    display: inline;
+}
+
+.author{
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    vertical-align: baseline;
+}
+
+.author:hover{
+    color: hsl(178, 100%, 50%);
+}
